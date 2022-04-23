@@ -96,7 +96,7 @@ public class UserController : ControllerBase
         return Convert.ToInt32(claims.Where(x => x.Type == UserConstants.UserId).First().Value);
     }
 
-    [HttpPut("UserId")]
+    [HttpPut]
     [Authorize]
     public async Task<ActionResult> UpdateUser([FromBody] UserUpdateDTO Data)
     {
